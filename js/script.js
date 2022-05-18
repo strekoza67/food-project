@@ -240,7 +240,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const postData = async (url, data) => {
     const res = await fetch(url, {
-      method: 'POST',
+      method: "POST",
       headers: {
         'Content-type': 'application/json'
       },
@@ -265,6 +265,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const formData = new FormData(form);
 
       const json = JSON.stringify(Object.fromEntries(formData.entries()));
+      console.log(json);
 
       postData('http://localhost:3000/requests', json)
         .then(data => {
